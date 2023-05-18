@@ -61,5 +61,18 @@ public class Graph {
         }  
     }  
 
+    public void addEdge(Edge edge){
+        adjlist.get(edge.s).add(new Node(edge.d, edge.w));  
+
+    }
+
+    public int getEdge(int v,int k){
+        return adjlist.get(v).get(k).weight;
+    }
+
+    public void updateEdge(Edge edge){
+        adjlist.get(edge.s).get(edge.d).weight=edge.w;
+    }
+
 
 }
